@@ -11,6 +11,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// dashboard
+import Dashboard from "./pages/dashboard/Dashboard";
+import Create from "./pages/dashboard/Create";
+import Edit from "./pages/dashboard/Edit";
+import Products from "./pages/dashboard/Products";
+
+
 
 
 function App() {
@@ -75,6 +82,13 @@ function App() {
         <Route path='/' element={<Home products={products} addtocart={addtocart}/>}/>
         <Route path='/details/:id' element={<CardDetails  addtocart={addtocart}/>} />
         <Route path='/cart' element={<Carts cart={cart} removeItem={removeItem}/>} />
+        
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Products />} />
+          <Route path="product/create" element={<Create />} />
+          <Route path="product/edit" element={<Edit />} />
+        </Route>
+       
        </Routes>
 
        <ToastContainer />

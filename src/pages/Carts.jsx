@@ -3,6 +3,8 @@ import payment from "../images/payment.png"
 
 function Carts(props) {
   let total = 0;
+  const shiping= 70;
+  let ship=''
 
 
 
@@ -21,7 +23,7 @@ function Carts(props) {
                   {props.cart.map((element, index) => {
                     {
                       total += +element.price;
-
+                      ship=total+shiping
                     }
                     return (
                       <>
@@ -91,7 +93,7 @@ function Carts(props) {
                       <strong>Total</strong> <small>(including VAT)</small>
                     </div>
                     <span>
-                      <strong>{total}</strong>
+                      <strong>{ship}</strong>
                     </span>
                   </li>
                 </ul>

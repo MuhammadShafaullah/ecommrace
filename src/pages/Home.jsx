@@ -13,6 +13,13 @@ function Home(props) {
       <div className="container">
 
         <div className='row'>
+        {props.products.length == 0 ? (
+              <div className="cn text-center mt-5">
+                <div class="spinner-border text-danger spncen" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              </div> 
+            ) : null}
           {
             props.products.map((element, index) => {
               return (

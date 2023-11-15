@@ -75,6 +75,11 @@ function Navebar(props) {
             </li>
           </ul>
         </li>
+        <li className="nav-item">
+                <NavLink className="nav-link" to="/dashboard">
+                  Dashboard
+                </NavLink>
+        </li>
       </ul>
       <form className="d-flex">
         <input
