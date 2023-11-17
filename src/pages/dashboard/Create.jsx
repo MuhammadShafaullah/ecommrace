@@ -3,6 +3,8 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
 
+
+
 function Create() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
@@ -21,6 +23,8 @@ function Create() {
       theme: "light"
     });
 
+
+    //create item
   const handleSubmit = () => {
     console.log(name, price);
 
@@ -30,7 +34,7 @@ function Create() {
       axios
         .post("https://65489546dd8ebcd4ab232d5f.mockapi.io/products", {
           name: name,
-          price: price
+          price: price,
         })
         .then((res) => {
           console.log(res);

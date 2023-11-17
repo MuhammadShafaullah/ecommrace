@@ -2,16 +2,21 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 
 function Dashboard() {
+  
+
+
+
+
   return (
     <>
-      <h1>Dashboard</h1>
+      
       <div className="container">
-        <div className="row">
-          <div className="col-md-3">
+        <div className="row d-flex justify-content-center align-item-center">
+          <div className="col-md-3 p-5 border mt-5">
             <Sidebar />
           </div>
-          <div className="col-md-9">
-            <Outlet />
+          <div className="col-md-9 p-5 w-75">
+            <Outlet/>
           </div>
         </div>
       </div>

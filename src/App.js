@@ -62,7 +62,7 @@ function App() {
   };
 
   const items=(()=>{
-    axios.get('https://6548a1d6dd8ebcd4ab23491c.mockapi.io/store')
+    axios.get('https://65489546dd8ebcd4ab232d5f.mockapi.io/products')
     .then((response) =>{
       console.log(response);
        setProducts(response.data)})
@@ -86,7 +86,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Products />} />
           <Route path="product/create" element={<Create />} />
-          <Route path="product/edit" element={<Edit />} />
+          <Route path="product/edit/:id" element={<Edit />} />
         </Route>
        
        </Routes>
